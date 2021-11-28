@@ -14,8 +14,8 @@ module.exports = (app) => {
             "verified": false,
             "handle": "ReactJS",
             "time": "2h",
-            "avatar-image": "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
-            "logo-image": "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+            "avatar-image": "../../../images/profile.jpeg",
+            "logo-image": "../../../images/profile.jpeg",
             "stats": {
                 "comments": 123,
                 "retweets": 234,

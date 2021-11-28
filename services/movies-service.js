@@ -25,8 +25,6 @@ module.exports = (app) => {
             movie._id === movieId ? newMovie : movie);
         res.json(movies);
     }
-
-    
     app.post('/api/movies', createMovie);
     app.put('/api/movies/:mid', saveMovie);
 
