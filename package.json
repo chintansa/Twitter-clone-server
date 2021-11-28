@@ -1,0 +1,23 @@
+{
+  "name": "web-dev-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/chintansa/web-dev-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chintansa/web-dev-node/issues"
+  },
+  "homepage": "https://github.com/chintansa/web-dev-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
