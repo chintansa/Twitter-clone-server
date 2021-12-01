@@ -1,0 +1,797 @@
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("d8b3cd4c-a42a-40ff-b09f-fc51322750f7") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-11-30T16:49:10.176-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-11-30T16:49:10.176-05:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+        2021-11-30T16:49:10.176-05:00: Soft rlimits for open file descriptors too low
+        2021-11-30T16:49:10.176-05:00:         currentValue: 10240
+        2021-11-30T16:49:10.176-05:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+{
+        "_id" : ObjectId("61a5ba0fcd103e22d9af1c1d"),
+        "topic" : "Space",
+        "userName" : "Scott Manley",
+        "verified" : true,
+        "handle" : "DJSnM",
+        "published-date" : "2020-12-10",
+        "time" : "1 day",
+        "title" : "JavaScript is programming language that can run on browsers as well as desktops",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "logo-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "avatar-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "tweets" : "123K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        }
+}
+{
+        "_id" : ObjectId("61a5ba38cd103e22d9af1c1e"),
+        "topic" : "Web Development",
+        "userName" : "jQuery",
+        "verified" : false,
+        "handle" : "jQuery",
+        "title" : "jQuery",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last week",
+        "logo-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "avatar-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "tweets" : "122K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        }
+}
+{
+        "_id" : ObjectId("61a5ba4fcd103e22d9af1c1f"),
+        "topic" : "Web Development",
+        "userName" : "NodeJS",
+        "verified" : true,
+        "handle" : "NodeJS",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+chintanaddoni@Chintans-MacBook-Air FirstR % mongo
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("7670f7c7-8888-47c0-a003-21d6e22f913f") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-11-30T16:49:10.176-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-11-30T16:49:10.176-05:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+        2021-11-30T16:49:10.176-05:00: Soft rlimits for open file descriptors too low
+        2021-11-30T16:49:10.176-05:00:         currentValue: 10240
+        2021-11-30T16:49:10.176-05:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use webdev
+switched to db webdev
+> db.who.insert({{   "avatarIcon": "data:image/png;base64,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",
+...         "userName": "Java", 
+...         "handle": "Java"
+...     });
+... 
+... 
+> 
+> 
+> db.insert({   "avatarIcon": "data:image/png;base64,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",
+...         "userName": "Java", 
+...         "handle": "Java"
+...     });
+uncaught exception: TypeError: db.insert is not a function :
+@(shell):1:1
+> db.tweets.insert({   "avatarIcon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAt1BMVEX///8AdY/ykREAbYkAaocAcYwAb4sAc47xigDxiQDyjgAAa4cAaIXyjwDxhwCxzdX0+fp6qrn97d33vYP//Pji7O/Z6OyWvMdxpbX86db+9+/4yZr98OPw9viMtsI7iZ+/1dz4xJL1smv0okX1rmH1qlnzmi3617X73sHylRv2uHijwsyMt8MYf5fK3eNWl6r506/znTb50Kb1sW/4xpT748r0pU30okFcmatFjqIzg5oAX3+ErbtTHU6cAAAIU0lEQVR4nO2ba1ubShCAJbvsEi4BNBC0QrBabYqA9VQNMf//d51dIARiEq2GQvaZ91Mll2cmMzvX7ckJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPSAy64FaJ2Hb11L0Dano3HXIrTNSHgjGrddS9A2s5HowWam3HUtQssYylnXIrTLxUj93rUM7fKkGDddy9AuV6oquIa3huBeeq4MVLEjzY06UB66FqJNTkeDwfC0ayna5NoYDAZdC9Emj8pgoP7qWooWuWQ+Ohiddy1Ge4xnzEeNl67FaJFnlZlw+LNrMdrjhh3CgXHdtRjt8Z0rOBiJmypyCw6Uq67laI0fuYLq767laIvxda7gwLjoWpKWuLhVcwWFTYWnqlEoKOqA5q7w0MHmoPT8QRCfvRptU3D8eC2KRX9ss+DF2UiU+nsVYwajx9rDs5EhSsw5L2NMvRodXw1Hwkxq7oaFfobyVD17MBRxdjPfyhhjDKpNxeVvxVCE6S5WQVSdVVnhQTEGiihH8ORX6aLKdbUS/cV0FkfBszJLKM/Vo2f2aPi05zNHxZ/SRZVqhD/+zRKHIkyQeVgpuM4LXEH1R4cyHZRL5Y2CeQesCFKJ8vVLEUXXJnvkcUcVpsP/Vva76zsJF3nxJsxFk3Hpo+raJ2+4huKs1a6UzYY3H3YLtHSabR7Ck7PcSYVJ9udFMaPUrs0UkWcoykWax9xg9W39ZaGzMBr+Klyy1kH8LA6mMF7635vMUM6ihLkMVWhYv59Xaqj+15lMhyX30saa8OeqiOtMpsPyR9m04fmqVRTETQuLzWpPxuU8yhBkMXOhvPHI7+VMcSiIEV+4yUb1RumpbBcblj1iHpWNfMja39JPBenx896i2Qs+lbFGlB74Sn0TVW7KkyhKB5VHlcadhItSQ1FutfHIsnHJ8nHVFgtS2PBp6bA5s3hZBRtBRhkv6qYRT1eFjSBri/Gt2uiBT1ZdlSgJg4WWmWo8N56UfbAwGnIVN5R5NkQqv0/ya0LDRlf/ULTGYuT8grNR4xJU3kRtuO6xczec1XJDXs2Js14ruHypFW9jtTmCE4Q/63EGC6bGbGu+d8Lo/j5KrH8m1Rfx3dBf/3VZBdQ7ZTNFlpi2F+uYaMRz2pfuS1iuuZzH8Txyt1rjWd0zMXVTTaJED1oT7ss4pr3Ar8QLd7ra+cjYO/SeYEmSNO/woh0CP5rqiOhesu9Nt9fv1NwBYiri6JCCHQjL0wiVKHX3vuv8/QXwgkoSRf677/vX+BJhv71E51/+JpMbkfTvKObnh4tm/2UktJKND/hcQxofTrQD4cjMRzkyziYfzGl+EnkLhMnGocu/B7Ug4xexbFLqSAnWpfnSTJzth8liqdK896YYYyLzj+hx4/Dm36L1MfH7kxgjuXBWicoIaURaTFPPDiYFwdJLs0VMMUao0K14X2rWfwo/P9CkMzX245ge05Ks1GQKUCrLZIUss7+r1ySZaGhhhxvfkfATTdMuxP8gfhjMYyY7N1NNnRpcaWbgeL71wC7576OZ/17wv8NyQjPwslhCOuZOWYA1jHUSZ/NlFDq7Dlr+q9A+HsMdWI6bJKHJSRLX3anYiqi3Nc2B8LkJSZ9PYcHnfSxjp5AsDihKC1jhcnr/2Q/biCvY60OYpCxbfLrkWrJMofXaRZ0p5rGefrIzsLFE8eSwIh2YuMz1dPK+jixvNmtua4okbdrzEcZiVc0QNF2aO1tF12RFASsJUL1HSlgBJ/U+0TsxolXhgjCOp3M7iHguDFlKjKIJq0wXVK8KO0KrxGfrOO63g5ZEMSa0WaCRVUlTVqbrFwlTqoibIdGzsFvJP467jHVEtlekNdUJ0hfL0o9ZgAp6fv42YEEki5HGjMZ6pIaueauBMJKmQW0eZ+4dXvUWP2Ft7nwaE50X3xwdS3Hm2RPT7d+c6WtYvuMzel2pAICIOOan+4tjwIoWWF92LUWLJJTXbmQibPD0cZHkCZ5HyWaOsPigW8r27296ihvZRWnp6LXCE9M4Sz2b481TPg7mVTfF3pEZ2InS19dqcWjrzUKNVWoFtapbxsHx6JjYMSvJ6qfOlNF7lbeMadiZxH8Ha5dkCaUblWaYISTv0pI5r7R/U9wjIikPm/bbV/jIjSJctYS0WGGwjkNKJ0cTaKxMy22yc7bmJFHgzbNFzJhm6dyO9vcVYd/mbOXgST7YSjrW+2XdfMXAbXigGbUTy6hfoyhvNVmTswPMIKyAVQp6v4YZ4Tq1Y++L7uUuKZEk3LcrGPd6lRAIjoNPJwB3wlMO+536piBL9tI6tbMsR9OPXsOocJJJKvEBJJVxuvKDXh1GM9NJYwKqS+nSTN4dNVm+E0ZeRnA+eKRUI5WfW1nPTOlEU4SaU2Ce1uPMC6IwSVynmEFZvs+3wUkY3S/nU+7W5aKfUqKR1Kxsn0h6/ypWKwwyhJtjYFbB8Gk3X91jrOvFSFHj90x4lVO9hVU9jRLHSXW9rwWdGwZpzC2z8w5G3cxcNxrPJ2EjPTgeJlrYkQIfg5+uwEtjubiCUVyiKeD/ZjZlBkV8YbPlNkbIzrS26FdG3AM7dKEZ8YtQtsewl0EwicyQncvt7088go5hvfY5fHPOMgZLqSLqZ7mmHetIJppk9zXCrHF3b3234YQTbyHz0ITwMajHcSeZtOBNYOLs2sOwTO+G0ZIFI4zzQITxwjOPJrpwHHOZyfqrjiiLmCzAFLBok2bTBWtDWIYsYiwrC+TYO6L/QdLAYkljme8OX/WSPN/n+V/H0oIVPB8o7Y6CvFQLi5t7Jk8W79/dAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC2+B8h+Zb+OK6xLgAAAABJRU5ErkJggg==",
+...         "userName": "Java", 
+...         "handle": "Java"
+...     });
+WriteResult({ "nInserted" : 1 })
+> db.tweets.insert({   "avatarIcon": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+...         "userName": "Relativity Space",
+...         "handle": "relativityspace"
+...     });
+WriteResult({ "nInserted" : 1 })
+> db.tweets.insert("avatarIcon": "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+...         "userName": "Virgin Galactic",
+...         "handle": "virgingalactic"});
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:29
+> db.tweets.find().pretty()
+{
+        "_id" : ObjectId("61a5b998cd103e22d9af1c1b"),
+        "topic" : "Web Development",
+        "userName" : "ReactJS",
+        "verified" : false,
+        "handle" : "ReactJS",
+        "time" : "2h",
+        "title" : "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+
+        },
+        "logo-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "avatar-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5b9dfcd103e22d9af1c1c"),
+        "topic" : "Space",
+        "userName" : "SpaceX",
+        "verified" : false,
+        "handle" : "spacex",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+                "image" : ""
+        },
+        "time" : "last month",
+        "logo-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "avatar-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "tweets" : "120K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 350
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5ba0fcd103e22d9af1c1d"),
+        "topic" : "Space",
+        "userName" : "Scott Manley",
+        "verified" : true,
+        "handle" : "DJSnM",
+        "published-date" : "2020-12-10",
+        "time" : "1 day",
+        "title" : "JavaScript is programming language that can run on browsers as well as desktops",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "logo-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "avatar-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "tweets" : "123K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5ba38cd103e22d9af1c1e"),
+        "topic" : "Web Development",
+        "userName" : "jQuery",
+        "verified" : false,
+        "handle" : "jQuery",
+        "title" : "jQuery",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last week",
+        "logo-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "avatar-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "tweets" : "122K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5ba4fcd103e22d9af1c1f"),
+        "topic" : "Web Development",
+        "userName" : "NodeJS",
+        "verified" : true,
+        "handle" : "NodeJS",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last month",
+        "logo-image" : "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
+        "avatar-image" : "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
+        "tweets" : "120K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a69ee47414002fcd43db85"),
+        "avatarIcon" : "data:image/png;base64,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",
+        "userName" : "Java",
+        "handle" : "Java"
+}
+{
+        "_id" : ObjectId("61a69ef87414002fcd43db86"),
+        "avatarIcon" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+        "userName" : "Relativity Space",
+        "handle" : "relativityspace"
+}
+> db.tweets.remove({"_id" : ObjectId("61a69ee47414002fcd43db85")});
+WriteResult({ "nRemoved" : 1 })
+> db.tweets.remove({"_id" : ObjectId("61a69ef87414002fcd43db86")});
+WriteResult({ "nRemoved" : 1 })
+> db.tweets.find().pretty()
+{
+        "_id" : ObjectId("61a5b998cd103e22d9af1c1b"),
+        "topic" : "Web Development",
+        "userName" : "ReactJS",
+        "verified" : false,
+        "handle" : "ReactJS",
+        "time" : "2h",
+        "title" : "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+
+        },
+        "logo-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "avatar-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5b9dfcd103e22d9af1c1c"),
+        "topic" : "Space",
+        "userName" : "SpaceX",
+        "verified" : false,
+        "handle" : "spacex",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+                "image" : ""
+        },
+        "time" : "last month",
+        "logo-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "avatar-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "tweets" : "120K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 350
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5ba0fcd103e22d9af1c1d"),
+        "topic" : "Space",
+        "userName" : "Scott Manley",
+        "verified" : true,
+        "handle" : "DJSnM",
+        "published-date" : "2020-12-10",
+        "time" : "1 day",
+        "title" : "JavaScript is programming language that can run on browsers as well as desktops",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "logo-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "avatar-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "tweets" : "123K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 345
+        },
+        "liked" : true
+}
+{
+        "_id" : ObjectId("61a5ba38cd103e22d9af1c1e"),
+        "topic" : "Web Development",
+        "userName" : "jQuery",
+        "verified" : false,
+        "handle" : "jQuery",
+        "title" : "jQuery",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last week",
+chintanaddoni@Chintans-MacBook-Air FirstR % mongo
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("620fa968-8c02-422f-94ed-57e41c991510") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-11-30T16:49:10.176-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-11-30T16:49:10.176-05:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+        2021-11-30T16:49:10.176-05:00: Soft rlimits for open file descriptors too low
+        2021-11-30T16:49:10.176-05:00:         currentValue: 10240
+        2021-11-30T16:49:10.176-05:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> db.who.insert({   "avatarIcon": "data:image/png;base64,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",
+...         "userName": "Java", 
+...         "handle": "Java"
+...     });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({   "avatarIcon": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+...         "userName": "Relativity Space",
+...         "handle": "relativityspace"
+...     });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert( {   "avatarIcon": "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+...         "userName": "Virgin Galactic",
+...         "handle": "virgingalactic"
+...     });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({   "avatarIcon": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+...         "userName": "NASA", "handle": "NASA"
+...      });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({   "avatarIcon": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+...         "userName": "Tesla", 
+...         "handle": "Tesla"
+...      } );
+WriteResult({ "nInserted" : 1 })
+> db.who.find().pretty()
+{
+        "_id" : ObjectId("61a69f7d28fd89590930c1a2"),
+        "avatarIcon" : "data:image/png;base64,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",
+        "userName" : "Java",
+        "handle" : "Java"
+}
+{
+        "_id" : ObjectId("61a69f8e28fd89590930c1a3"),
+        "avatarIcon" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+        "userName" : "Relativity Space",
+        "handle" : "relativityspace"
+}
+{
+        "_id" : ObjectId("61a69fa428fd89590930c1a4"),
+        "avatarIcon" : "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+        "userName" : "Virgin Galactic",
+        "handle" : "virgingalactic"
+}
+{
+        "_id" : ObjectId("61a69fb628fd89590930c1a5"),
+        "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+        "userName" : "NASA",
+        "handle" : "NASA"
+}
+{
+        "_id" : ObjectId("61a69fc528fd89590930c1a6"),
+        "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+        "userName" : "Tesla",
+        "handle" : "Tesla"
+}
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+tweets  0.000GB
+webdev  0.000GB
+> use webdev
+switched to db webdev
+> show collections
+movies
+tweets
+who
+> db.who.find().pretty()
+> use webdev
+switched to db webdev
+> db.who.find().pretty()
+> db.who.insert({ "avatarIcon" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+...         "userName" : "Relativity Space",
+...         "handle" : "relativityspace"
+... });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({ "avatarIcon" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+...         "userName" : "Relativity Space",
+...         "handle" : "relativityspace"
+... 
+... 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> db.who.insert({"avatarIcon" : "data:image/png;base64,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",
+...         "userName" : "Java",
+...         "handle" : "Java"
+... });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({{
+...         "_id" : ObjectId("61a69fa428fd89590930c1a4"),
+...         "avatarIcon" : "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+...         "userName" : "Virgin Galactic",
+...         "handle" : "virgingalactic"
+... 
+... 
+> 
+> 
+> 
+> db.who.insert({"avatarIcon" : "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+...         "userName" : "Virgin Galactic",
+...         "handle" : "virgingalactic"
+... });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({ "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+...         "userName" : "NASA",
+...         "handle" : "NASA"
+... });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({ "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+...         "userName" : "Tesla",
+...         "handle" : "Tesla"
+... });
+WriteResult({ "nInserted" : 1 })
+> db.who.insert({ "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",         "userName" : "Mesla",         "handle" : "mesla" });
+
+WriteResult({ "nInserted" : 1 })
+> db.profile.insert({
+...   "firstName": "Kuroko Tetsuya",
+  "lastName": "",
+  "handle": "phantomSixth",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBv3q1iB7_9sDod2bCjZLBRtWMPHNLkji_Vl8SJEAzHphiJf3haTYTFjQyJjkx_ns_ag&usqp=CAU", 
+  "bannerPicture": "https://www.gojinshi.com/wp-content/uploads/2020/08/Kuroko-no-Basket-Watch-Order-Guide.jpg",
+      "lastName": "",
+...   "handle": "phantomSixth",
+... "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBv3q1iB7_9sDod2bCjZLBRtWMPHNLkji_Vl8SJEAzHphiJf3haTYTFjQyJjkx_ns_ag&usqp=CAU", 
+...   "bannerPicture": "https://www.gojinshi.com/wp-content/uploads/2020/08/Kuroko-no-Basket-Watch-Order-Guide.jpg",
+... "bio": " Marvel and Anime weeb, tech enthusiast.",
+...   "website": "youtube.com/webdevtv",
+... "location": "Boston, MA",
+...   "dateOfBirth": "November 8, 1965",
+...   "dateJoined": "April, 2009",
+chintanaddoni@Chintans-MacBook-Air FirstR % mongo
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("b9001d7c-c3a0-4cb0-8982-9da1a7d1e77d") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-11-30T16:49:10.176-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-11-30T16:49:10.176-05:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+        2021-11-30T16:49:10.176-05:00: Soft rlimits for open file descriptors too low
+        2021-11-30T16:49:10.176-05:00:         currentValue: 10240
+        2021-11-30T16:49:10.176-05:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use webdev
+switched to db webdev
+> db.profile.find().pretty()
+{
+        "_id" : ObjectId("61a6b34828fd89590930c1ae"),
+        "firstName" : "Kuroko Tetsuya",
+        "lastName" : "",
+        "handle" : "phantomSixth",
+        "profilePicture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBv3q1iB7_9sDod2bCjZLBRtWMPHNLkji_Vl8SJEAzHphiJf3haTYTFjQyJjkx_ns_ag&usqp=CAU",
+        "bannerPicture" : "https://www.gojinshi.com/wp-content/uploads/2020/08/Kuroko-no-Basket-Watch-Order-Guide.jpg",
+        "bio" : " Marvel and Anime weeb, tech enthusiast.",
+        "website" : "youtube.com/webdevtv",
+        "location" : "Boston, MA",
+        "dateOfBirth" : "November 8, 1965",
+        "dateJoined" : "March, 2009",
+        "followingCount" : 312,
+        "followersCount" : 180
+}
+> db.profile.find({"firstName" : "Kuroko Tetsuya"});
+{ "_id" : ObjectId("61a6b34828fd89590930c1ae"), "firstName" : "Kuroko Tetsuya", "lastName" : "", "handle" : "phantomSixth", "profilePicture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBv3q1iB7_9sDod2bCjZLBRtWMPHNLkji_Vl8SJEAzHphiJf3haTYTFjQyJjkx_ns_ag&usqp=CAU", "bannerPicture" : "https://www.gojinshi.com/wp-content/uploads/2020/08/Kuroko-no-Basket-Watch-Order-Guide.jpg", "bio" : " Marvel and Anime weeb, tech enthusiast.", "website" : "youtube.com/webdevtv", "location" : "Boston, MA", "dateOfBirth" : "November 8, 1965", "dateJoined" : "March, 2009", "followingCount" : 312, "followersCount" : 180 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+tweets  0.000GB
+webdev  0.000GB
+> use webdev
+switched to db webdev
+> db.tweets.find().pretty()
+{
+        "_id" : ObjectId("61a5b998cd103e22d9af1c1b"),
+        "topic" : "Web Development",
+        "userName" : "ReactJS",
+        "verified" : false,
+        "handle" : "ReactJS",
+        "time" : "2h",
+        "title" : "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+
+        },
+        "logo-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "avatar-image" : "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK.png",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 344
+        },
+        "liked" : false
+}
+{
+        "_id" : ObjectId("61a5b9dfcd103e22d9af1c1c"),
+        "topic" : "Space",
+        "userName" : "SpaceX",
+        "verified" : false,
+        "handle" : "spacex",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "attachments" : {
+                "image" : ""
+        },
+        "time" : "last month",
+        "logo-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "avatar-image" : "https://www.logotaglines.com/wp-content/uploads/2021/06/spaceX-Logo-tagline-slogan-motto-mission-vision-founder-owner.jpg",
+        "tweets" : "120K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 349
+        },
+        "liked" : false
+}
+{
+        "_id" : ObjectId("61a5ba0fcd103e22d9af1c1d"),
+        "topic" : "Space",
+        "userName" : "Scott Manley",
+        "verified" : true,
+        "handle" : "DJSnM",
+        "published-date" : "2020-12-10",
+        "time" : "1 day",
+        "title" : "JavaScript is programming language that can run on browsers as well as desktops",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "logo-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "avatar-image" : "https://static01.nyt.com/images/2020/05/20/business/media/20xp-joerogan/20xp-joerogan-mobileMasterAt3x.jpg",
+        "tweets" : "123K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 344
+        },
+        "liked" : false
+}
+{
+        "_id" : ObjectId("61a5ba38cd103e22d9af1c1e"),
+        "topic" : "Web Development",
+        "userName" : "jQuery",
+        "verified" : false,
+        "handle" : "jQuery",
+        "title" : "jQuery",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last week",
+        "logo-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "avatar-image" : "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+        "tweets" : "122K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 344
+        },
+        "liked" : false
+}
+{
+        "_id" : ObjectId("61a5ba4fcd103e22d9af1c1f"),
+        "topic" : "Web Development",
+        "userName" : "NodeJS",
+        "verified" : true,
+        "handle" : "NodeJS",
+        "title" : "",
+        "tweet" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "time" : "last month",
+        "logo-image" : "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
+        "avatar-image" : "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
+        "tweets" : "120K",
+        "stats" : {
+                "comments" : 123,
+                "retweets" : 234,
+                "likes" : 344
+        },
+        "liked" : false
+}
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use webdev
+switched to db webdev
+> 
+> 
+> 
+> 
+> db.movies.insert({title: 'Aliens', rating: 4.5})
+WriteResult({ "nInserted" : 1 })
+> 
+> 
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+webdev  0.000GB
+> 
+> 
+> db.movies.insert({title: 'Terminator', rating: 4.8})
+WriteResult({ "nInserted" : 1 })
+> 
+> 
+> db.movies.insert({title: 'Avatar', rating: 4.7})
+WriteResult({ "nInserted" : 1 })
+> 
+> 
+> 
+> db.movies.insert({title: 'Dune', rating: 4.9})
+WriteResult({ "nInserted" : 1 })
+> 
+> 
+> db.movies.find()
+{ "_id" : ObjectId("619917d871bd771a0835e35b"), "title" : "Aliens", "rating" : 4.5 }
+{ "_id" : ObjectId("6199180071bd771a0835e35c"), "title" : "Terminator", "rating" : 4.8 }
+{ "_id" : ObjectId("6199180e71bd771a0835e35d"), "title" : "Avatar", "rating" : 4.7 }
+{ "_id" : ObjectId("6199181971bd771a0835e35e"), "title" : "Dune", "rating" : 4.9 }
+> 
+> 
+> db.movies.find({_id : ObjectId("619917d871bd771a0835e35b")})
+{ "_id" : ObjectId("619917d871bd771a0835e35b"), "title" : "Aliens", "rating" : 4.5 }
+> 
+> 
+> db.movies.find({title : "Aliens"})
+{ "_id" : ObjectId("619917d871bd771a0835e35b"), "title" : "Aliens", "rating" : 4.5 }
+> 
+> 
+> 
+> db.movies.find().pretty()
+{
+	"_id" : ObjectId("619917d871bd771a0835e35b"),
+	"title" : "Aliens",
+	"rating" : 4.5
+}
+{
+	"_id" : ObjectId("6199180071bd771a0835e35c"),
+	"title" : "Terminator",
+	"rating" : 4.8
+}
+{
+	"_id" : ObjectId("6199180e71bd771a0835e35d"),
+	"title" : "Avatar",
+	"rating" : 4.7
+}
+{
+	"_id" : ObjectId("6199181971bd771a0835e35e"),
+	"title" : "Dune",
+	"rating" : 4.9
+}
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+tweets  0.000GB
+webdev  0.000GB
+> use webdev
+switched to db webdev
+> db.who.find().pretty()
+{
+        "_id" : ObjectId("61a6a37328fd89590930c1a7"),
+        "avatarIcon" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+        "userName" : "Relativity Space",
+        "handle" : "relativityspace"
+}
+{
+        "_id" : ObjectId("61a6a3c728fd89590930c1a8"),
+        "avatarIcon" : "data:image/png;base64,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",
+        "userName" : "Java",
+        "handle" : "Java"
+}
+{
+        "_id" : ObjectId("61a6a40028fd89590930c1a9"),
+        "avatarIcon" : "https://cdn.worldvectorlogo.com/logos/virgin-1.svg",
+        "userName" : "Virgin Galactic",
+        "handle" : "virgingalactic"
+}
+{
+        "_id" : ObjectId("61a6a41228fd89590930c1aa"),
+        "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+        "userName" : "NASA",
+        "handle" : "NASA"
+}
+{
+        "_id" : ObjectId("61a6a42a28fd89590930c1ab"),
+        "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+        "userName" : "Tesla",
+        "handle" : "Tesla"
+}
+{
+        "_id" : ObjectId("61a6aa8628fd89590930c1ac"),
+        "avatarIcon" : "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+        "userName" : "Mesla",
+        "handle" : "mesla"
+}
+> db.profile.find().pretty()
+{
+        "_id" : ObjectId("61a6b34828fd89590930c1ae"),
+        "firstName" : "Kuroko Tetsuya",
+        "lastName" : "",
+        "handle" : "phantomSixth",
+        "profilePicture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBv3q1iB7_9sDod2bCjZLBRtWMPHNLkji_Vl8SJEAzHphiJf3haTYTFjQyJjkx_ns_ag&usqp=CAU",
+        "bannerPicture" : "https://www.gojinshi.com/wp-content/uploads/2020/08/Kuroko-no-Basket-Watch-Order-Guide.jpg",
+        "bio" : " Marvel and Anime weeb, tech enthusiast.",
+        "website" : "youtube.com/webdevtv",
+        "location" : "Boston, MA",
+        "dateOfBirth" : "November 8, 1965",
+        "dateJoined" : "March, 2009",
+        "followingCount" : 312,
+        "followersCount" : 180
+}
+> 

@@ -1,5 +1,5 @@
-// const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost:27017/webdev');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/webdev');
 
 const express = require('express');
 const app = express();
@@ -25,7 +25,10 @@ app.get('/hello', (req, res) => {
 require('./services/movies-service')(app);
 require('./services/tweeter-service')(app);
 require('./services/profile-service')(app);
-// require('./movies/service')(app);
+require('./movies/service')(app);
 
+require('./tweets/tweeter-service')(app);
+require('./who/who-service')(app);
+require('./profile/profile-service')(app);
 
 app.listen(process.env.PORT || 4000);

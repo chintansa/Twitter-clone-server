@@ -1,0 +1,5 @@
+{"_id":{"$oid":"61a2e503c1e960aba7b8865e"},"title":"Aliens","rating":4.5}
+{"_id":{"$oid":"61a30d2dc1e960aba7b8865f"},"title":"Terminator","rating":4.8}
+{"_id":{"$oid":"61a30d5ac1e960aba7b88660"},"title":"Dune","rating":4.9}
+{"_id":{"$oid":"61a3f2f1767ad48acf08711e"},"title":"Demon Slayer","__v":0}
+{"_id":{"$oid":"61a57c101e4ad4af4787f320"},"title":"hello","__v":0}
