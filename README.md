@@ -1,1 +1,1 @@
-# web-dev-node
+#Server side of the Twitter Clone hosted on Heroku
